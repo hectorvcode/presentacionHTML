@@ -36,13 +36,6 @@ class SlidesData {
     };
   }
 
-  // =================================
-  // SLIDES DE INTRODUCCIÓN (1-5)
-  // =================================
-
-  /**
-   * Slide 1: Portada de la presentación
-   */
   static getSlide1() {
     return `
           <div class="container-fluid">
@@ -63,16 +56,14 @@ class SlidesData {
                               <div class="col-md-6 mb-3">
                                   <p><strong>Curso:</strong> Desarrollo de Soluciones Cloud</p>
                                   <p><strong>Código:</strong> 2310-7A MOM 2 VIRTUAL</p>
-                                  <p><strong>Actividad:</strong> Profundización 4</p>
+                                  <p><strong>Actividad:</strong> Etapa Profundización </p>
                                   <p><strong>Fecha:</strong> Mayo 2025</p>
                               </div>
                               <div class="col-md-6">
                                   <p><strong>Integrantes del Grupo:</strong></p>
                                   <ul class="mt-3">
-                                      <li>Estudiante 1</li>
-                                      <li>Estudiante 2</li>
-                                      <li>Estudiante 3</li>
-                                      <li>Estudiante 4</li>
+                                      <li>Hector Fabio Vasquez Lopez</li>
+                                      <li>cc. 80058158 2</li>
                                   </ul>
                               </div>
                           </div>
@@ -510,236 +501,265 @@ class SlidesData {
 
   static getSlide7() {
     return `
-        <div class="container-fluid slide-content">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10 col-xl-8">
-                        <h2>Solución Propuesta: Arquitectura Data Lake Híbrida</h2>
-                        
-                        <div class="architecture-box mb-4">
-                            <h3 style="color: var(--aws-orange); text-align: center; margin-bottom: 2rem;">
-                                <i class="bi bi-diagram-3"></i> Arquitectura de Almacenamiento Multi-Capa
-                            </h3>
-                            
-                            <div class="flow-container">
-                                <div class="flow-row">
-                                    <div class="flow-item">
-                                        <div class="service-icon mx-auto" style="background: var(--success-green);">S3</div>
-                                        <h5>Amazon S3</h5>
-                                        <small>Data Lake Principal</small>
-                                    </div>
-                                    <div class="flow-arrow">+</div>
-                                    <div class="flow-item">
-                                        <div class="service-icon mx-auto" style="background: var(--aws-light-blue); color: var(--aws-dark-blue);">RS</div>
-                                        <h5>Amazon Redshift</h5>
-                                        <small>Data Warehouse</small>
-                                    </div>
-                                    <div class="flow-arrow">+</div>
-                                    <div class="flow-item">
-                                        <div class="service-icon mx-auto" style="background: var(--warning-yellow); color: var(--aws-dark-blue);">DB</div>
-                                        <h5>DynamoDB</h5>
-                                        <small>NoSQL Rápido</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 mb-3">
-                                <div class="feature-card h-100">
-                                    <div class="feature-icon">🗄️</div>
-                                    <h4>Capa Fría</h4>
-                                    <p><strong>S3 Glacier</strong></p>
-                                    <ul class="text-start">
-                                        <li>Datos históricos >90 días</li>
-                                        <li>Compliance y auditorías</li>
-                                        <li>Costo ultra-bajo</li>
-                                        <li>Durabilidad 99.999999999%</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 mb-3">
-                                <div class="feature-card h-100">
-                                    <div class="feature-icon">⚡</div>
-                                    <h4>Capa Tibia</h4>
-                                    <p><strong>S3 Standard-IA + Redshift</strong></p>
-                                    <ul class="text-start">
-                                        <li>Datos 7-90 días</li>
-                                        <li>Analytics regulares</li>
-                                        <li>Balance costo-rendimiento</li>
-                                        <li>Consultas complejas</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 mb-3">
-                                <div class="feature-card h-100">
-                                    <div class="feature-icon">🔥</div>
-                                    <h4>Capa Caliente</h4>
-                                    <p><strong>DynamoDB + S3 Standard</strong></p>
-                                    <ul class="text-start">
-                                        <li>Datos últimos 7 días</li>
-                                        <li>Acceso sub-segundo</li>
-                                        <li>Consultas frecuentes</li>
-                                        <li>Auto-scaling dinámico</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="solution-card mt-4">
-                            <h4><i class="bi bi-gear"></i> Beneficios Clave de la Solución Híbrida</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <ul>
-                                        <li><strong>Optimización automática:</strong> Intelligent Tiering de S3</li>
-                                        <li><strong>Escalabilidad ilimitada:</strong> Petabytes sin límites</li>
-                                        <li><strong>Performance optimizada:</strong> Cada carga en su capa ideal</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul>
-                                        <li><strong>Costos predictibles:</strong> Pay-as-you-use real</li>
-                                        <li><strong>Integración nativa:</strong> Con pipeline existente</li>
-                                        <li><strong>Gestión simplificada:</strong> Policies automáticas</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container-fluid slide-content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            <h2>Solución Propuesta: Arquitectura Data Lake Híbrida</h2>
+            
+            <div class="architecture-box mb-4">
+              <h3 style="color: var(--aws-orange); text-align: center; margin-bottom: 2rem;">
+                <i class="bi bi-diagram-3"></i> Arquitectura de Almacenamiento Multi-Capa
+              </h3>
+              
+              <!-- Componentes principales en fila horizontal -->
+              <div class="row text-center mb-4">
+                <div class="col-md-4 mb-3">
+                  <div class="service-icon mx-auto mb-3" style="background: var(--success-green); width: 100px; height: 100px; font-size: 2.5rem;">S3</div>
+                  <h5 style="color: var(--success-green);">Amazon S3</h5>
+                  <p><strong>Data Lake Principal</strong></p>
+                  <small>Almacenamiento escalable con Intelligent Tiering</small>
                 </div>
-            </div>  
-      `;
+                
+                <div class="col-md-4 mb-3">
+                  <div class="service-icon mx-auto mb-3" style="background: var(--aws-light-blue); color: var(--aws-dark-blue); width: 100px; height: 100px; font-size: 2.5rem;">RS</div>
+                  <h5 style="color: var(--aws-light-blue);">Amazon Redshift</h5>
+                  <p><strong>Data Warehouse</strong></p>
+                  <small>Analytics complejos y consultas SQL</small>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                  <div class="service-icon mx-auto mb-3" style="background: var(--warning-yellow); color: var(--aws-dark-blue); width: 100px; height: 100px; font-size: 2.5rem;">DB</div>
+                  <h5 style="color: var(--warning-yellow);">DynamoDB</h5>
+                  <p><strong>NoSQL Rápido</strong></p>
+                  <small>Acceso de baja latencia y metadatos</small>
+                </div>
+              </div>
+              
+              <!-- Conectores visuales -->
+              <div class="text-center mb-4">
+                <span style="color: var(--aws-orange); font-size: 1.5rem; font-weight: bold;">
+                  ↔️ Integración Completa ↔️
+                </span>
+              </div>
+            </div>
+  
+            <!-- Estrategia por capas -->
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div class="feature-card h-100" style="border-left: 5px solid #87ceeb;">
+                  <div class="feature-icon" style="font-size: 2rem;">🗄️</div>
+                  <h4 style="color: #87ceeb;">Capa Fría</h4>
+                  <p><strong>S3 Glacier & Deep Archive</strong></p>
+                  <ul class="text-start">
+                    <li>Datos históricos >90 días</li>
+                    <li>Compliance y auditorías</li>
+                    <li>Costo ultra-bajo ($0.0036/GB/mes)</li>
+                    <li>Durabilidad 99.999999999%</li>
+                    <li>Retención a largo plazo</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 mb-3">
+                <div class="feature-card h-100" style="border-left: 5px solid #ffc107;">
+                  <div class="feature-icon" style="font-size: 2rem;">⚡</div>
+                  <h4 style="color: #ffc107;">Capa Tibia</h4>
+                  <p><strong>S3 Standard-IA + Redshift</strong></p>
+                  <ul class="text-start">
+                    <li>Datos 7-90 días</li>
+                    <li>Analytics regulares y reportes</li>
+                    <li>Balance costo-rendimiento</li>
+                    <li>Consultas complejas SQL</li>
+                    <li>Dashboards empresariales</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 mb-3">
+                <div class="feature-card h-100" style="border-left: 5px solid #28a745;">
+                  <div class="feature-icon" style="font-size: 2rem;">🔥</div>
+                  <h4 style="color: #28a745;">Capa Caliente</h4>
+                  <p><strong>DynamoDB + S3 Standard</strong></p>
+                  <ul class="text-start">
+                    <li>Datos últimos 7 días</li>
+                    <li>Acceso sub-segundo (&lt;1ms)</li>
+                    <li>Consultas frecuentes API</li>
+                    <li>Auto-scaling dinámico</li>
+                    <li>Cache de sesiones activas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div class="solution-card mt-4">
+              <h4><i class="bi bi-gear"></i> Beneficios Clave de la Solución Híbrida</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul>
+                    <li><strong>Optimización automática:</strong> Intelligent Tiering de S3</li>
+                    <li><strong>Escalabilidad ilimitada:</strong> Petabytes sin límites</li>
+                    <li><strong>Performance optimizada:</strong> Cada carga en su capa ideal</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li><strong>Costos predictibles:</strong> Pay-as-you-use real</li>
+                    <li><strong>Integración nativa:</strong> Con pipeline existente</li>
+                    <li><strong>Gestión simplificada:</strong> Policies automáticas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   static getSlide8() {
     return `
-          <div class="container-fluid slide-content">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-11 col-xl-10">
-                        <h2>Arquitectura Propuesta: Diagrama Completo</h2>
-                        
-                        <div class="architecture-box">
-                            <h4 style="color: var(--aws-orange); text-align: center; margin-bottom: 2rem;">
-                                Pipeline de Datos End-to-End con Almacenamiento Híbrido
-                            </h4>
-                            
-                            <!-- Ingesta Layer -->
-                            <div class="mb-4">
-                                <h5 style="color: var(--aws-light-blue); border-bottom: 1px solid var(--aws-light-blue); padding-bottom: 0.5rem;">
-                                    <i class="bi bi-arrow-down-circle"></i> Capa de Ingesta
-                                </h5>
-                                <div class="flow-container">
-                                    <div class="flow-row">
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto">API</div>
-                                            <h6>API Gateway</h6>
-                                            <small>Eventos de clientes</small>
-                                        </div>
-                                        <div class="flow-arrow">→</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto">K</div>
-                                            <h6>Kinesis Streams</h6>
-                                            <small>Streaming en tiempo real</small>
-                                        </div>
-                                        <div class="flow-arrow">→</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto">λ</div>
-                                            <h6>Lambda</h6>
-                                            <small>Procesamiento</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Processing Layer -->
-                            <div class="mb-4">
-                                <h5 style="color: var(--aws-light-blue); border-bottom: 1px solid var(--aws-light-blue); padding-bottom: 0.5rem;">
-                                    <i class="bi bi-cpu"></i> Capa de Procesamiento
-                                </h5>
-                                <div class="flow-container">
-                                    <div class="flow-row">
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto">ECS</div>
-                                            <h6>Amazon ECS</h6>
-                                            <small>Lógica compleja</small>
-                                        </div>
-                                        <div class="flow-arrow">→</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto">KF</div>
-                                            <h6>Kinesis Firehose</h6>
-                                            <small>Entrega automática</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Storage Layer - NUEVA -->
-                            <div class="mb-4" style="background: rgba(40, 167, 69, 0.1); padding: 1rem; border-radius: 10px; border: 2px solid var(--success-green);">
-                                <h5 style="color: var(--success-green); border-bottom: 1px solid var(--success-green); padding-bottom: 0.5rem;">
-                                    <i class="bi bi-database"></i> Capa de Almacenamiento - NUEVA SOLUCIÓN
-                                </h5>
-                                <div class="flow-container">
-                                    <div class="flow-row">
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: var(--success-green);">S3</div>
-                                            <h6>Amazon S3</h6>
-                                            <small>Data Lake principal<br>Intelligent Tiering</small>
-                                        </div>
-                                        <div class="flow-arrow">⇄</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: var(--aws-light-blue); color: var(--aws-dark-blue);">RS</div>
-                                            <h6>Redshift</h6>
-                                            <small>Data Warehouse<br>Analytics complejos</small>
-                                        </div>
-                                        <div class="flow-arrow">⇄</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: var(--warning-yellow); color: var(--aws-dark-blue);">DB</div>
-                                            <h6>DynamoDB</h6>
-                                            <small>NoSQL rápido<br>Metadatos/Sesiones</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Analytics Layer -->
-                            <div>
-                                <h5 style="color: var(--aws-light-blue); border-bottom: 1px solid var(--aws-light-blue); padding-bottom: 0.5rem;">
-                                    <i class="bi bi-graph-up"></i> Capa de Analytics
-                                </h5>
-                                <div class="flow-container">
-                                    <div class="flow-row">
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: #9d4edd;">QS</div>
-                                            <h6>QuickSight</h6>
-                                            <small>Dashboards</small>
-                                        </div>
-                                        <div class="flow-arrow">+</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: #f72585;">SM</div>
-                                            <h6>SageMaker</h6>
-                                            <small>Machine Learning</small>
-                                        </div>
-                                        <div class="flow-arrow">+</div>
-                                        <div class="flow-item">
-                                            <div class="service-icon mx-auto" style="background: #4cc9f0;">API</div>
-                                            <h6>APIs Analytics</h6>
-                                            <small>Integración apps</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stat-box mt-3">
-                            <p style="color: var(--success-green); font-size: clamp(1rem, 2vw, 1.3rem);">
-                                <strong><i class="bi bi-check-circle"></i> Arquitectura completa y escalable que resuelve todos los gaps identificados</strong>
-                            </p>
-                        </div>
-                    </div>
+      <div class="container-fluid slide-content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-11 col-xl-10">
+            <h2>Arquitectura Propuesta: Diagrama Completo</h2>
+            
+            <div class="architecture-box">
+              <h4 style="color: var(--aws-orange); text-align: center; margin-bottom: 2rem;">
+                Pipeline de Datos End-to-End con Almacenamiento Híbrido
+              </h4>
+              
+              <!-- Capa de Ingesta -->
+              <div class="mb-4">
+                <h5 style="color: var(--aws-light-blue); border-bottom: 2px solid var(--aws-light-blue); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                  <i class="bi bi-arrow-down-circle"></i> 1. Capa de Ingesta
+                </h5>
+                <div class="row text-center">
+                  <div class="col-md-3">
+                    <div class="service-icon mx-auto mb-2" style="width: 80px; height: 80px; font-size: 1.8rem;">API</div>
+                    <h6>API Gateway</h6>
+                    <small>Eventos de clientes</small>
+                  </div>
+                  <div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-arrow-right" style="color: var(--aws-orange); font-size: 2rem;"></i>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="service-icon mx-auto mb-2" style="width: 80px; height: 80px; font-size: 1.8rem;">K</div>
+                    <h6>Kinesis Streams</h6>
+                    <small>Streaming tiempo real</small>
+                  </div>
+                  <div class="col-md-1 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-arrow-right" style="color: var(--aws-orange); font-size: 2rem;"></i>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="service-icon mx-auto mb-2" style="width: 80px; height: 80px; font-size: 1.8rem;">λ</div>
+                    <h6>Lambda</h6>
+                    <small>Procesamiento</small>
+                  </div>
                 </div>
+              </div>
+  
+              <!-- Capa de Procesamiento -->
+              <div class="mb-4">
+                <h5 style="color: var(--aws-light-blue); border-bottom: 2px solid var(--aws-light-blue); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                  <i class="bi bi-cpu"></i> 2. Capa de Procesamiento
+                </h5>
+                <div class="row text-center">
+                  <div class="col-md-5">
+                    <div class="service-icon mx-auto mb-2" style="width: 80px; height: 80px; font-size: 1.8rem;">ECS</div>
+                    <h6>Amazon ECS</h6>
+                    <small>Lógica compleja</small>
+                  </div>
+                  <div class="col-md-2 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-arrow-right" style="color: var(--aws-orange); font-size: 2rem;"></i>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="service-icon mx-auto mb-2" style="width: 80px; height: 80px; font-size: 1.8rem;">KF</div>
+                    <h6>Kinesis Firehose</h6>
+                    <small>Entrega automática</small>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Capa de Almacenamiento - NUEVA SOLUCIÓN -->
+              <div class="mb-4" style="background: rgba(40, 167, 69, 0.15); padding: 1.5rem; border-radius: 15px; border: 3px solid var(--success-green);">
+                <h5 style="color: var(--success-green); border-bottom: 2px solid var(--success-green); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                  <i class="bi bi-database"></i> 3. Capa de Almacenamiento - NUEVA SOLUCIÓN
+                </h5>
+                <div class="row text-center">
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: var(--success-green); width: 90px; height: 90px; font-size: 2rem;">S3</div>
+                    <h6 style="color: var(--success-green);">Amazon S3</h6>
+                    <small><strong>Data Lake principal<br>Intelligent Tiering</strong></small>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: var(--aws-light-blue); color: var(--aws-dark-blue); width: 90px; height: 90px; font-size: 2rem;">RS</div>
+                    <h6 style="color: var(--aws-light-blue);">Redshift</h6>
+                    <small><strong>Data Warehouse<br>Analytics complejos</strong></small>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: var(--warning-yellow); color: var(--aws-dark-blue); width: 90px; height: 90px; font-size: 2rem;">DB</div>
+                    <h6 style="color: var(--warning-yellow);">DynamoDB</h6>
+                    <small><strong>NoSQL rápido<br>Metadatos/Sesiones</strong></small>
+                  </div>
+                </div>
+                
+                <!-- Conectores bidireccionales -->
+                <div class="text-center mt-3">
+                  <span style="color: var(--success-green); font-size: 1.3rem; font-weight: bold;">
+                    ⇄ Integración Bidireccional ⇄
+                  </span>
+                </div>
+              </div>
+  
+              <!-- Capa de Analytics -->
+              <div>
+                <h5 style="color: var(--aws-light-blue); border-bottom: 2px solid var(--aws-light-blue); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                  <i class="bi bi-graph-up"></i> 4. Capa de Analytics
+                </h5>
+                <div class="row text-center">
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: #9d4edd; width: 80px; height: 80px; font-size: 1.8rem;">QS</div>
+                    <h6>QuickSight</h6>
+                    <small>Dashboards BI</small>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: #f72585; width: 80px; height: 80px; font-size: 1.8rem;">SM</div>
+                    <h6>SageMaker</h6>
+                    <small>Machine Learning</small>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="service-icon mx-auto mb-2" style="background: #4cc9f0; width: 80px; height: 80px; font-size: 1.8rem;">API</div>
+                    <h6>APIs Analytics</h6>
+                    <small>Integración apps</small>
+                  </div>
+                </div>
+              </div>
             </div>
-      `;
+  
+            <!-- Beneficios clave -->
+            <div class="solution-card mt-4">
+              <h4><i class="bi bi-check-circle"></i> Arquitectura Completa que Resuelve Todos los Gaps</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul>
+                    <li><strong>✅ Almacenamiento escalable:</strong> S3 como columna vertebral</li>
+                    <li><strong>✅ Analytics poderosos:</strong> Redshift para consultas complejas</li>
+                    <li><strong>✅ Acceso ultra-rápido:</strong> DynamoDB para datos frecuentes</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li><strong>✅ Integración seamless:</strong> Con pipeline existente</li>
+                    <li><strong>✅ Optimización automática:</strong> Costos y performance</li>
+                    <li><strong>✅ Escalabilidad ilimitada:</strong> Crecimiento sin límites</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   static getSlide9() {
@@ -2358,49 +2378,12 @@ class SlidesData {
       <div class="container-fluid slide-content">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-10 col-xl-8">
-                        <h1><i class="bi bi-question-circle"></i> Preguntas & Discusión</h1>
+                        <h1><i class="bi bi-question-circle"></i> Proyecto AWS aplicado </h1>
                         
-                        <div class="qa-section mb-4">
-                            <h3 style="color: var(--purple); margin-bottom: 2rem;">
-                                <i class="bi bi-chat-dots"></i> Sesión de Preguntas y Respuestas
-                            </h3>
-                            <p class="lead" style="font-size: clamp(1.2rem, 3vw, 2rem);">
-                                Estamos listos para discutir cualquier aspecto de la solución propuesta
-                            </p>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <div class="impact-card h-100">
-                                    <h4><i class="bi bi-gear"></i> Preguntas Técnicas</h4>
-                                    <ul>
-                                        <li>Detalles de implementación específicos</li>
-                                        <li>Configuraciones y optimizaciones</li>
-                                        <li>Integración con sistemas existentes</li>
-                                        <li>Estrategias de migración de datos</li>
-                                        <li>Monitoreo y troubleshooting</li>
-                                        <li>Escalabilidad y performance tuning</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 mb-4">
-                                <div class="impact-card h-100">
-                                    <h4><i class="bi bi-briefcase"></i> Preguntas de Negocio</h4>
-                                    <ul>
-                                        <li>ROI y justificación financiera</li>
-                                        <li>Casos de uso específicos del sector</li>
-                                        <li>Comparativas con otras soluciones</li>
-                                        <li>Riesgos y estrategias de mitigación</li>
-                                        <li>Timeline y plan de proyecto</li>
-                                        <li>Organizacionales y de cambio</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="architecture-box">
-                            <h4><i class="bi bi-lightbulb"></i> Temas Sugeridos para Discusión</h4>
+                            <h4><i class="bi bi-lightbulb"></i> Valor Agregado Solución </h4>
                             <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <h5 style="color: var(--success-green);">Escalabilidad</h5>
@@ -2433,12 +2416,12 @@ class SlidesData {
                             <div class="contact-card">
                                 <h5><i class="bi bi-envelope"></i> Contacto</h5>
                                 <p>Para consultas técnicas detalladas</p>
-                                <strong>equipo@proyecto.com</strong>
+                                <strong>hfvasquez@ucompensar.edu.co</strong>
                             </div>
                             <div class="contact-card">
                                 <h5><i class="bi bi-calendar"></i> Follow-up</h5>
                                 <p>Sesión de profundización</p>
-                                <strong>Próxima semana</strong>
+                                <strong>Próxima sesión</strong>
                             </div>
                             <div class="contact-card">
                                 <h5><i class="bi bi-file-earmark"></i> Documentación</h5>

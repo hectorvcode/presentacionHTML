@@ -163,6 +163,7 @@ class NavigationManager {
     });
 
     // Navegación con rueda del mouse
+    /*
     let wheelTimeout;
     document.addEventListener(
       "wheel",
@@ -179,7 +180,7 @@ class NavigationManager {
         }, 150);
       },
       { passive: true }
-    );
+    );*/
   }
 
   // =================================
@@ -469,8 +470,8 @@ class NavigationManager {
       mouse: {
         "Click derecha (>75%)": "Siguiente slide",
         "Click izquierda (<25%)": "Slide anterior",
-        "Scroll Down": "Siguiente slide",
-        "Scroll Up": "Slide anterior",
+        //"Scroll Down": "Siguiente slide",
+        //"Scroll Up": "Slide anterior",
       },
     };
   }
