@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución de Almacenamiento AWS - Presentación Completa</title>
+    <meta
+      name="description"
+      content="Presentación sobre soluciones de almacenamiento AWS para empresas de análisis de datos en el sector turismo"
+    />
+    <meta name="author" content="Grupo Desarrollo de Soluciones Cloud" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Favicon (opcional) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <!-- Contenedor principal de la presentación -->
+    <div class="presentation-container">
+      <!-- Container donde se cargarán las slides dinámicamente -->
+      <div id="slide-container"></div>
+    </div>
+
+    <!-- Navegación principal -->
+    <div class="navigation">
+      <button class="nav-button" onclick="previousSlide()" id="prev-btn">
+        <i class="bi bi-arrow-left"></i> Anterior
+      </button>
+      <button class="nav-button" onclick="nextSlide()" id="next-btn">
+        Siguiente <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- Contador de slides -->
+    <div class="slide-counter">
+      <span id="current-slide">1</span> / <span id="total-slides">21</span>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Menú de navegación rápida -->
+    <div class="quick-nav" id="quick-nav">
+      <button
+        class="quick-nav-toggle"
+        onclick="toggleQuickNav()"
+        title="Menú de navegación (M)"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="quick-nav-content" id="quick-nav-content">
+        <!-- Contenido se genera dinámicamente -->
+      </div>
+    </div>
+
+    <!-- Control de pantalla completa (opcional) -->
+    <div class="fullscreen-control">
+      <button
+        class="nav-button"
+        onclick="toggleFullscreen()"
+        title="Pantalla completa (F)"
+      >
+        <i class="bi bi-arrows-fullscreen"></i>
+      </button>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts modulares de la aplicación -->
+    <script src="js/slides/slides.js"></script>
+    <script src="js/slideManager.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
