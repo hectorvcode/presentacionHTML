@@ -1,14 +1,5 @@
 // js/navigation.js - Sistema de navegación simplificado
 
-/**
- * NavigationManager - Gestiona todas las formas de navegación
- * Funcionalidades:
- * - Navegación por teclado
- * - Navegación táctil (swipe)
- * - Navegación por mouse
- * - Quick navigation menu
- * - Pantalla completa
- */
 class NavigationManager {
   constructor(slideManager) {
     this.slideManager = slideManager;
@@ -37,9 +28,7 @@ class NavigationManager {
     console.log("🧭 NavigationManager inicializado");
   }
 
-  // =================================
-  // NAVEGACIÓN POR TECLADO
-  // =================================
+
 
   setupKeyboardNavigation() {
     document.addEventListener("keydown", (event) => {
@@ -99,9 +88,7 @@ class NavigationManager {
     });
   }
 
-  // =================================
-  // NAVEGACIÓN TÁCTIL
-  // =================================
+
 
   setupTouchNavigation() {
     document.addEventListener(
@@ -139,9 +126,6 @@ class NavigationManager {
     }
   }
 
-  // =================================
-  // NAVEGACIÓN POR MOUSE
-  // =================================
 
   setupMouseNavigation() {
     document.addEventListener("click", (event) => {
@@ -183,9 +167,6 @@ class NavigationManager {
     );*/
   }
 
-  // =================================
-  // NAVEGACIÓN RÁPIDA
-  // =================================
 
   setupQuickNavigation() {
     // Cerrar con click fuera
@@ -275,9 +256,7 @@ class NavigationManager {
     });
   }
 
-  // =================================
-  // PANTALLA COMPLETA
-  // =================================
+
 
   setupFullscreen() {
     document.addEventListener("fullscreenchange", () => {
@@ -330,9 +309,7 @@ class NavigationManager {
     }
   }
 
-  // =================================
-  // MÉTODOS DE UTILIDAD
-  // =================================
+
 
   isInputActive(element) {
     return (
@@ -362,13 +339,7 @@ class NavigationManager {
     );
   }
 
-  // =================================
-  // MÉTODOS PÚBLICOS
-  // =================================
 
-  /**
-   * Habilitar/deshabilitar navegación por teclado
-   */
   setKeyboardEnabled(enabled) {
     this.keyboardEnabled = enabled;
     console.log(
@@ -476,9 +447,6 @@ class NavigationManager {
     };
   }
 
-  /**
-   * Mostrar notificación temporal
-   */
   showNotification(message, type = "info") {
     // Crear notificación simple
     const notification = document.createElement("div");
@@ -517,9 +485,6 @@ class NavigationManager {
   }
 }
 
-// =================================
-// FUNCIONES GLOBALES PARA COMPATIBILIDAD
-// =================================
 
 function nextSlide() {
   if (window.navigationManager) {

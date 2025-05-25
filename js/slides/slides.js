@@ -3,7 +3,6 @@
 /**
  * Clase SlidesData
  * Contiene todas las definiciones de contenido HTML para cada slide
- * Organizada de forma modular para fácil mantenimiento
  */
 class SlidesData {
   /**

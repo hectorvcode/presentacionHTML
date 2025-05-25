@@ -1,13 +1,5 @@
 // js/slideManager.js - Gestor central de slides simplificado
 
-/**
- * SlideManager - Clase principal para gestionar las slides de la presentación
- * Funcionalidades:
- * - Carga dinámica de slides
- * - Gestión de estado de navegación
- * - Preloading inteligente
- * - Manejo de errores
- */
 class SlideManager {
   constructor() {
     this.currentSlide = 1;
@@ -43,9 +35,7 @@ class SlideManager {
     };
   }
 
-  /**
-   * Inicializa el SlideManager
-   */
+
   async init() {
     try {
       console.log("🎯 Inicializando SlideManager...");
@@ -73,9 +63,7 @@ class SlideManager {
     }
   }
 
-  /**
-   * Precargar slides críticas para mejor performance
-   */
+
   async preloadCriticalSlides() {
     const criticalSlides = [1, 2, 3, 6, 9, 19, 21];
 
@@ -442,9 +430,6 @@ class SlideManager {
       `;
   }
 
-  // =================================
-  // MÉTODOS DE UTILIDAD PÚBLICA
-  // =================================
 
   /**
    * Obtener datos de la slide actual

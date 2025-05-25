@@ -5,7 +5,7 @@
  */
 const AppConfig = {
   version: "1.0.0",
-  debug: false, // Cambiar a true para desarrollo
+  debug: false,
   title: "Presentación AWS - Almacenamiento Cloud",
   description:
     "Solución de almacenamiento para empresas de análisis de datos de viajes",
@@ -39,22 +39,11 @@ class PresentationApp {
     try {
       console.log(`🚀 Iniciando ${AppConfig.title} v${AppConfig.version}`);
 
-      // Mostrar loading
       this.showLoading();
-
-      // Verificar dependencias
       this.checkDependencies();
-
-      // Inicializar componentes principales
       await this.initializeComponents();
-
-      // Configurar listeners globales
       this.setupGlobalListeners();
-
-      // Ocultar loading
       this.hideLoading();
-
-      // Marcar como inicializado
       AppState.initialized = true;
       AppState.initTime = performance.now() - this.startTime;
 
@@ -62,7 +51,6 @@ class PresentationApp {
         `✅ Aplicación inicializada en ${AppState.initTime.toFixed(2)}ms`
       );
 
-      // Mostrar mensaje de bienvenida en modo debug
       if (AppConfig.debug) {
         this.showWelcomeMessage();
       }
@@ -73,9 +61,6 @@ class PresentationApp {
     }
   }
 
-  /**
-   * Verificar que las dependencias estén disponibles
-   */
   checkDependencies() {
     // Verificar elementos del DOM requeridos
     const requiredElements = [
@@ -95,7 +80,6 @@ class PresentationApp {
       );
     }
 
-    // Verificar clases requeridas
     if (typeof SlidesData === "undefined") {
       throw new Error("SlidesData class not found");
     }
@@ -108,7 +92,6 @@ class PresentationApp {
       throw new Error("NavigationManager class not found");
     }
 
-    // Verificar Bootstrap (opcional)
     if (typeof bootstrap === "undefined") {
       console.warn(
         "⚠️ Bootstrap no está cargado. Algunas funcionalidades pueden verse afectadas."
@@ -118,9 +101,7 @@ class PresentationApp {
     console.log("✅ Dependencias verificadas correctamente");
   }
 
-  /**
-   * Inicializar componentes principales
-   */
+
   async initializeComponents() {
     try {
       // 1. Inicializar SlideManager
@@ -141,9 +122,7 @@ class PresentationApp {
     }
   }
 
-  /**
-   * Configurar listeners globales
-   */
+
   setupGlobalListeners() {
     // Listener para cambios de orientación
     window.addEventListener("orientationchange", () => {
@@ -187,9 +166,7 @@ class PresentationApp {
     console.log("✅ Listeners globales configurados");
   }
 
-  /**
-   * Manejar cambios de tamaño de ventana
-   */
+
   handleResize() {
     // Actualizar slide actual para ajustar al nuevo tamaño
     if (window.slideManager && window.slideManager.initialized) {
@@ -206,9 +183,7 @@ class PresentationApp {
     }
   }
 
-  /**
-   * Mostrar loading inicial
-   */
+
   showLoading() {
     const loadingHTML = `
           <div id="app-loading" style="
@@ -258,9 +233,7 @@ class PresentationApp {
     }
   }
 
-  /**
-   * Ocultar loading
-   */
+
   hideLoading() {
     const loadingElement = document.getElementById("app-loading");
     if (loadingElement) {
@@ -274,9 +247,7 @@ class PresentationApp {
     }
   }
 
-  /**
-   * Mostrar mensaje de bienvenida en modo debug
-   */
+
   showWelcomeMessage() {
     console.log(`
 🎯 MODO DEBUG ACTIVADO
@@ -307,9 +278,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  /**
-   * Mostrar error crítico
-   */
+
   showError(error) {
     const container =
       document.getElementById("slide-container") || document.body;
@@ -383,9 +352,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
       `;
   }
 
-  /**
-   * Registrar error para debugging
-   */
+
   logError(type, error) {
     const errorInfo = {
       type,
@@ -420,9 +387,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  /**
-   * Mostrar información de debug
-   */
+
   showDebugInfo() {
     const debugInfo = {
       app: {
@@ -492,9 +457,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  /**
-   * Verificar disponibilidad de localStorage
-   */
+
   isLocalStorageAvailable() {
     try {
       localStorage.setItem("test", "test");
@@ -505,9 +468,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  /**
-   * Obtener errores almacenados
-   */
+
   getStoredErrors() {
     try {
       return JSON.parse(localStorage.getItem("presentation-errors") || "[]");
@@ -516,9 +477,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  /**
-   * Limpiar errores almacenados
-   */
+
   clearStoredErrors() {
     try {
       localStorage.removeItem("presentation-errors");
@@ -528,13 +487,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     }
   }
 
-  // =================================
-  // MÉTODOS PÚBLICOS
-  // =================================
 
-  /**
-   * Obtener estado de la aplicación
-   */
   getAppState() {
     return {
       ...AppState,
@@ -545,9 +498,7 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     };
   }
 
-  /**
-   * Reiniciar la aplicación
-   */
+
   restart() {
     console.log("🔄 Reiniciando aplicación...");
 
@@ -559,31 +510,21 @@ Tiempo de inicialización: ${AppState.initTime.toFixed(2)}ms
     this.init();
   }
 
-  /**
-   * Habilitar modo debug
-   */
+
   enableDebugMode() {
     AppConfig.debug = true;
     console.log("🐛 Modo debug habilitado");
     this.showWelcomeMessage();
   }
 
-  /**
-   * Deshabilitar modo debug
-   */
+
   disableDebugMode() {
     AppConfig.debug = false;
     console.log("🔇 Modo debug deshabilitado");
   }
 }
 
-// =================================
-// INICIALIZACIÓN AUTOMÁTICA
-// =================================
 
-/**
- * Inicializar cuando el DOM esté listo
- */
 document.addEventListener("DOMContentLoaded", () => {
   // Verificar que estemos en un entorno de navegador
   if (typeof window === "undefined") {
@@ -607,13 +548,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.presentationApp = new PresentationApp();
 });
 
-// =================================
-// API PÚBLICA GLOBAL
-// =================================
 
-/**
- * Funciones globales para acceso desde consola o scripts externos
- */
 window.getAppState = () => window.presentationApp?.getAppState();
 window.enableDebug = () => window.presentationApp?.enableDebugMode();
 window.disableDebug = () => window.presentationApp?.disableDebugMode();
